@@ -255,7 +255,19 @@ Monitor trends and historical wellbeing data over time.
 * Use `.env.example` for repository sharing.
 
 ---
+## 👥 Project Team
 
-## Academic Project
+This project was developed by:
 
-This project was developed as part of an AI-Supported Software Development course and demonstrates the application of AI Agent architecture for solving real-world wellbeing problems.
+* **Alviola Permatasari**
+* **Mutia Maharani Kusuma**
+
+---
+
+## 🎓 Academic Project
+
+This project was developed as part of the **Artificial Intelligence** course at **Computer Engineering - Sakarya University**.
+
+The objective of the project is to design and implement an AI-powered wellbeing assistant that applies AI Agent concepts, including perception, memory, reasoning, and action, to support women's daily wellbeing through personalized recommendations, menstrual cycle tracking, and intelligent planning.
+
+The project demonstrates the practical application of Artificial Intelligence techniques for solving real-world wellbeing challenges.
