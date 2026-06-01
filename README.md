@@ -1,53 +1,118 @@
-# 🌸 Wellbeing AI Agent
+# 🌸 Wellbeing AI Assistant for Women
 
-An AI-powered wellbeing assistant designed for women. The application combines menstrual cycle tracking, daily wellbeing analysis, and personalized weekly planning to provide actionable health insights.
+An AI-powered wellbeing assistant designed to support women's daily health and wellness through menstrual cycle tracking, mood analysis, personalized recommendations, and intelligent weekly planning.
+
+The system combines user wellbeing data, menstrual cycle information, weather conditions, and generative AI to provide personalized insights and actionable recommendations.
+
+---
+
+## Project Goal
+
+Many women experience fluctuations in mood, stress levels, energy, and wellbeing throughout their menstrual cycle. However, identifying patterns and receiving personalized guidance can be challenging.
+
+This project aims to solve this problem through an AI Agent that:
+
+* Tracks daily wellbeing metrics
+* Analyzes menstrual cycle information
+* Detects trends and patterns
+* Generates personalized recommendations
+* Creates weekly wellbeing plans
+* Adapts suggestions according to weather conditions
+
+---
+
+## AI Agent Architecture
+
+The application follows an AI Agent architecture composed of four main components:
+
+### 1. Perception Layer
+
+Collects user information such as:
+
+* Mood level
+* Stress level
+* Sleep duration
+* Menstrual cycle data
+* User goals
+
+### 2. Memory Layer
+
+Stores and retrieves historical user information using JSON-based local storage.
+
+### 3. Reasoning Layer
+
+Analyzes user data and identifies:
+
+* Emotional trends
+* Cycle-related patterns
+* Stress indicators
+* Sleep-related wellbeing issues
+
+### 4. Action Layer
+
+Produces:
+
+* Personalized recommendations
+* Wellbeing insights
+* Weekly action plans
+* Context-aware suggestions
 
 ---
 
 ## Features
 
-### Personalized Profile Setup
-- Unique username-based profiles
-- Automatic profile loading
-- Editable menstrual cycle history
-- Custom cycle length and period length settings
+### Personalized Profile Management
+
+* Username-based profiles
+* Automatic profile loading
+* Menstrual cycle configuration
+* Editable profile settings
 
 ### Menstrual Cycle Tracking
-- Current cycle day calculation
-- Next period prediction
-- Days remaining until next period
-- Personalized cycle estimates
+
+* Current cycle day calculation
+* Next period prediction
+* Days until next cycle
+* Personalized cycle estimation
 
 ### Daily Wellbeing Analysis
-- Mood tracking
-- Stress assessment
-- Sleep quality monitoring
-- AI-generated recommendations
+
+* Mood tracking
+* Stress assessment
+* Sleep monitoring
+* AI-generated recommendations
 
 ### Weekly Dashboard
-- Average mood, stress, and sleep metrics
-- Trend visualization
-- Progress comparison with previous entries
 
-### Weekly Goal Planner
-- AI-generated 7-day wellbeing plans
-- Personalized according to user goals
-- Recent planner history
-- One-click access to previous plans
+* Mood trends
+* Stress trends
+* Sleep statistics
+* Historical wellbeing analysis
 
-### Weather Integration
-- Current weather conditions
-- Weather-aware recommendations and planning
+### AI Weekly Planner
+
+* Personalized 7-day wellbeing plans
+* Goal-oriented recommendations
+* Planner history tracking
+* Easy access to previous plans
+
+### Weather-Aware Recommendations
+
+* Current weather integration
+* Context-sensitive suggestions
+* Outdoor activity recommendations
 
 ---
 
 ## Technologies Used
 
-- Python
-- Streamlit
-- Google Gemini API
-- JSON-based local data storage
-- Requests
+| Technology        | Purpose                      |
+| ----------------- | ---------------------------- |
+| Python            | Core application             |
+| Streamlit         | User Interface               |
+| Google Gemini API | AI recommendation generation |
+| JSON              | Local data storage           |
+| Requests          | API communication            |
 
 ---
 
@@ -55,6 +120,7 @@ An AI-powered wellbeing assistant designed for women. The application combines m
 
 ```text
 AIProject/
+│
 ├── agent/
 │   ├── action.py
 │   ├── memory.py
@@ -76,90 +142,120 @@ AIProject/
 │   ├── profile_utils.py
 │   └── weather_utils.py
 │
-├── .env
 ├── .env.example
 ├── .gitignore
 ├── config.py
 ├── requirements.txt
 └── README.md
 ```
+
 ---
-## Installation Guide
+
+## Installation
 
 ### Prerequisites
 
-Make sure the following are installed on your computer:
+* Python 3.10+
+* Google Gemini API Key
 
-- Python 3.10 or newer
-- Git (optional)
-- Google Gemini API Key
-
-### 1. Clone the Repository
+### Clone the Repository
 
 ```bash
 git clone <repository-url>
 cd AIProject
 ```
 
-### 2. Create Virtual Environment
+### Create a Virtual Environment
 
 ```bash
 python -m venv venv
 ```
 
-### 3. Activate the Virtual Environment
-#### Windows (Command Prompt)
-```cmd
+### Activate Virtual Environment
+
+#### Windows
+
+```bash
 venv\Scripts\activate
 ```
-#### Windows (PowerShell)
-```cmd
-venv\Scripts\Activate.ps1
-```
+
 #### macOS/Linux
-```cmd
+
+```bash
 source venv/bin/activate
 ```
-### 4. Install Required Packages
+
+### Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
+---
 
-## Configure Gemini API Key
+## Environment Configuration
 
-### open config.py and set your API key:
+Create a `.env` file in the project root directory:
 
-```bash
-GEMINI_API_KEY = "YOUR_GEMINI_API_KEY"
+```env
+GEMINI_API_KEY=YOUR_GEMINI_API_KEY
 ```
-You can create an API key at:
+
+You can obtain a Gemini API key from Google AI Studio:
+
 https://aistudio.google.com/app/apikey
 
-## Run the Application
+---
+
+## Running the Application
+
 ```bash
 streamlit run ui/app.py
 ```
-## Open in Browser
-If the browser does not open automatically, go to:
-```bash
+
+After launching, open:
+
+```text
 http://localhost:8501
 ```
-## Stop the Application
-```bash
-CTRL + C
-```
-## Virtual Environment Not Activated
 
-Activate the venv folder before running the application.
+---
 
-## Kullanım Adımları
+## Usage
 
-1. Profile Setup sekmesinde kullanıcı adı oluştur.
-2. Son adet başlangıç tarihlerini gir.
-3. Cycle Length ve Period Length bilgilerini kaydet.
-4. Daily Analysis sekmesinden günlük verileri gir.
-5. Yapay zekâ destekli önerileri görüntüle.
-6. Weekly Planner ile haftalık hedef planı oluştur.
-7. Dashboard üzerinden geçmiş verileri incele
+### Profile Setup
+
+1. Create a profile.
+2. Enter menstrual cycle information.
+3. Configure cycle length and period length.
+
+### Daily Analysis
+
+1. Enter daily mood.
+2. Enter stress level.
+3. Enter sleep information.
+4. Generate AI-powered recommendations.
+
+### Weekly Planner
+
+1. Define your wellbeing goals.
+2. Generate a personalized weekly plan.
+3. Review previous plans from planner history.
+
+### Dashboard
+
+Monitor trends and historical wellbeing data over time.
+
+---
+
+## Security Notes
+
+* Never commit your `.env` file.
+* Store API keys locally.
+* Use `.env.example` for repository sharing.
+
+---
+
+## Academic Project
+
+This project was developed as part of an AI-Supported Software Development course and demonstrates the application of AI Agent architecture for solving real-world wellbeing problems.
