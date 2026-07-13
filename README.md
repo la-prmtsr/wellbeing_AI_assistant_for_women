@@ -7,7 +7,7 @@ The system combines user wellbeing data, menstrual cycle information, weather co
 ---
 [![Live Demo](https://img.shields.io/badge/Live_Demo-Try_the_Web_App-ff69b4)](https://women-wellbeing-ai-assistant.streamlit.app/)
 
-**Website URL:** https://wellbeing-ai-assistant.streamlit.app
+**Website URL:** https://women-wellbeing-ai-assistant.streamlit.app/
 
 ---
 ## Project Goal
